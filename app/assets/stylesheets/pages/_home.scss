@@ -1,0 +1,159 @@
+// Specific CSS for your home-page
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+body {
+  margin: 0;
+  font-family: Outfit, sans-serif;
+  background: #111111;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1, h2, h3 {
+  font-weight: 400;
+}
+
+.weather-app {
+  min-height: 100vh;
+  background-image: url("https://source.unsplash.com/random/?sunny");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #FFF;
+  position: relative;
+  transition: 1000ms;
+  opacity: 1;
+}
+
+.weather-app::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 2em 3em 4em 3em;
+}
+
+.container > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.country-time, .temperature, .weather {
+  margin: 0 1em;
+}
+
+.country-time h1 {
+  margin: 0 0 0.2em;
+  font-size: 3em;
+}
+
+.temperature {
+  font-size: 7em;
+  margin: 0;
+}
+
+.weather img {
+  display: block;
+  margin: 0.5em 0;
+}
+
+.panel {
+  position: absolute;
+  width: 40%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background: rgba(100, 100, 100, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  z-index: 1;
+  padding: 3em 2em;
+  overflow-y: scroll;
+}
+
+.panel form {
+  margin-bottom: 3em;
+}
+
+.submit {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 2em;
+  margin: 0;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 1em;
+  transition: 0.5s;
+}
+
+.search {
+  background: none;
+  border: none;
+  border-bottom: 1px solid #CCC;
+  padding: 0 1em 1em 0;
+  color: #FFF;
+  width: 80%;
+  font-size: 1em;
+}
+
+.search:focus {
+  outline: none;
+}
+
+.search::placeholder {
+  color: #CCC;
+}
+
+.panel ul {
+  padding: 0 0 1em 0;
+  margin: 2em 0;
+  border-bottom: 1px #CCC solid;
+  list-style: none;
+}
+
+.panel ul li {
+  color: #CCC;
+  margin: 2.5em 0;
+}
+
+.panel ul h3 {
+  margin: 3em 0;
+}
+
+.country {
+  display: block;
+  cursor: pointer;
+}
+
+.country:hover {
+  color: #FFF;
+}
+
+.details li {
+  display: flex;
+  justify-content: space-between;
+    align-items: center;
+}
+

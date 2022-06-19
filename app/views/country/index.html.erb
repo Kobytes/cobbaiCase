@@ -1,0 +1,14 @@
+<div class=" container-fluid bg-black">
+  <div class="d-flex justify-content-center row">
+    <% @output.each do |country| %>
+      <div class="d-flex flex-column justify-content-center align-items-center col-3 p-3 m-3 shadow-sm bg-white">
+        <img alt="flag" class="img-fluid" src="<%= country["flag"] %>" style="height: 200px; width: 200px">
+          <h3 class="card-title"> <%= country["name"] %> </h3>
+          <h5><%= country["region"] %></h5>
+          <h5><%= country["capital"] %></h5>
+          <p class="text-muted"><%= country["population"] %> hab.</p>
+          <p>Currency : <%= country.dig('currencies', 0, 'code') %> (<%= country.dig('currencies', 0, 'symbol') %>)</p>
+      </div>
+    <% end %>
+    </div>
+  </div>

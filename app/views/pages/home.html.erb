@@ -1,0 +1,52 @@
+<div class="weather-app">
+  <div class="container">
+    <h3 class="brand">Cobbaï's Weather App</h3>
+    <div>
+        <h1 class="temperature">28&#176;</h1>
+        <div class="country-time">
+          <h1 class="name">Paris</h1>
+          <small>
+            <span class="time"><%= Time.now.strftime("%H:%M") %></span>
+            <span class="date"><%= Time.now.strftime("%A %d %B") %></span>
+          </small>
+        </div>
+        <div class="weather">
+          <img
+          src="https://cdn.weatherapi.com/weather/64x64/day/113.png"
+          class="icon"
+          alt="Weather icon"
+          width="50"
+          height="50"
+          />
+          <span class="condition">Sunny</span>
+        </div>
+      </div>
+  </div>
+  <div class="panel">
+      <form class="locationInput">
+          <input type="text" class="search" placeholder="Search for a country..."/>
+        <button type="submit" class="btn btn-primary submit">Search</button>
+      </form>
+      <ul class="country">
+        <li class="capital">Buenos Aires</li>
+        <li class="capital">Copenhagen</li>
+        <li class="capital">London</li>
+        <li class="capital">Lisbon</li>
+      </ul>
+      <ul class="details">
+        <h3>Weather Details</h3>
+        <li>
+          <span>Clouds</span>
+          <span class="clouds">0%</span>
+        </li>
+        <li>
+          <span>Humidity</span>
+          <span class="humidity">0%</span>
+        </li>
+        <li>
+          <span>Wind</span>
+          <span class="wind">0 km/h</span>
+        </li>
+      </ul>
+    </div>
+</div>
